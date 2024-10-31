@@ -1,13 +1,10 @@
 import React from "react";
 import { blogPosts, BlogPost } from "./blogData";
 
-const FeaturedBlog: React.FC = () => {
+const Blogs: React.FC = () => {
   return (
     <section className="bg-bg-color">
- <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-p4 lg:h-[600px] font-roboto">
-      {/* Blog Header */}
-      <h2 className="font-medium text-heading text-center mb-p4">Latest <span className="text-primary">Blogs</span></h2>
-
+ <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-p4 font-roboto">
       {/* Blog Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post: BlogPost) => (
@@ -48,4 +45,4 @@ const FeaturedBlog: React.FC = () => {
   );
 };
 
-export default FeaturedBlog;
+export default Blogs;

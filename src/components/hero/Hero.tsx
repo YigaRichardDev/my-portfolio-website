@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
       <p className="text-heading">Hello,</p>
       <p className="text-heading">This is <span className="text-primary">Richard Yiga</span></p>
       <p className="text-heading">SOFTWARE ENGINEER, UI/UX DESIGNER,<br /> GRAPHICS DESIGNER.</p>
-      <p className="text-sm md:text-link">
+      <p className="text-sm md:text-link lg:text-justify lg:mr-6">
         I’m a Software Engineer, UI/UX Designer, and Graphics Designer with expertise in creating seamless user experiences, designing impactful visuals, and developing efficient software solutions that bridge creativity and technology for high-quality digital products.
       </p>
       <ul className="list-disc pl-5 space-y-1 text-sm md:text-link">

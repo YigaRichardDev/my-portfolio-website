@@ -1,6 +1,6 @@
 const CallToAction = () => {
     return (
-      <div className="bg-bg-color py-p4 px-4 flex justify-center items-center font-roboto">
+      <div className=" py-p4 px-4 flex justify-center items-center font-roboto">
         <div className="text-center container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <h2 className="text-heading font-semibold mb-p2">Get In Touch</h2>

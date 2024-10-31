@@ -30,14 +30,14 @@ const Testimonials: React.FC = () => {
         <Carousel
           swipeable={true}
           draggable={true}
-          showDots={true}
+          showDots={false}
           responsive={responsive}
           infinite={true}
           autoPlaySpeed={3000}
           keyBoardControl={true}
           transitionDuration={500}
           containerClass="carousel-container"
-          dotListClass="custom-dot-list-style"
+          dotListClass="custom-dot-list-style px-4"
           itemClass="px-4"
         >
           {testimonials.map((testimonial: Testimonial) => (

@@ -17,6 +17,7 @@ const Navbar: React.FC = () => {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Portfolio", path: "/portfolio" },
+    { name: "Blogs", path: "/blogs" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -53,7 +54,7 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-link hover:text-primary transition-colors ${
+                  `text-link hover:text-secondary transition-colors ${
                     isActive ? "text-primary" : ""
                   }`
                 }

@@ -3,13 +3,11 @@ import CodeIcon from "@mui/icons-material/Code";
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import BrushIcon from '@mui/icons-material/Brush';
 
-const Services: React.FC = () => {
+const MyServices: React.FC = () => {
   return (
     <div className="bg-bg-color">
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-p4 lg:h-[600px] font-roboto">
-        <h2 className="text-heading font-medium text-center mb-p4">
-          My <span className="text-primary">Services</span>
-        </h2>
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-p4 lg:h-[500px] font-roboto">
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1 */}
           <div className="bg-white shadow-lg hover:shadow-xl border border-transparent hover:border-primary transition duration-300 p-6 flex flex-col w-full md:w-full lg:h-[420px] lg:w-full space-y-p1">
@@ -71,4 +69,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default MyServices;
