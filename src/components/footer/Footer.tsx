@@ -11,7 +11,8 @@ const Footer: React.FC = () => {
     <footer className="bg-black text-white font-roboto h-fh flex items-center justify-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-2">
         {/* Left Column: Copyright */}
-        <div className="text-link">
+        <div 
+        className="text-link">
           © {new Date().getFullYear()} Richard Yiga. All rights reserved.
         </div>
 

@@ -2,6 +2,7 @@ import React from "react";
 import CodeIcon from "@mui/icons-material/Code";
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import BrushIcon from '@mui/icons-material/Brush';
+import { motion } from "framer-motion";
 
 const MyServices: React.FC = () => {
   return (
@@ -10,7 +11,12 @@ const MyServices: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1 */}
-          <div className="bg-white shadow-lg hover:shadow-xl border border-transparent hover:border-primary transition duration-300 p-6 flex flex-col w-full md:w-full lg:h-[420px] lg:w-full space-y-p1">
+          <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+          className="bg-white shadow-lg hover:shadow-xl border border-transparent hover:border-primary transition duration-300 p-6 flex flex-col w-full md:w-full lg:h-[420px] lg:w-full space-y-p1">
             <div className="bg-primary p-2 rounded-full h-20 w-20 flex justify-center items-center">
               <CodeIcon
                 style={{ width: "50px", height: "50px", color: "white" }}
@@ -30,8 +36,13 @@ const MyServices: React.FC = () => {
             <button className="bg-primary text-center text-white py-p0 px-p2 w-[150px] hover:bg-secondary transition-colors duration-300">
               Read More
             </button>
-          </div>
-          <div className="bg-white shadow-lg hover:shadow-xl border border-transparent hover:border-primary transition duration-300 p-6 flex flex-col w-full md:w-full lg:h-[420px] lg:w-full space-y-p1">
+          </motion.div>
+          <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="bg-white shadow-lg hover:shadow-xl border border-transparent hover:border-primary transition duration-300 p-6 flex flex-col w-full md:w-full lg:h-[420px] lg:w-full space-y-p1">
             <div className="bg-primary p-2 rounded-full h-20 w-20 flex justify-center items-center">
               <DesignServicesIcon
                 style={{ width: "50px", height: "50px", color: "white" }}
@@ -46,8 +57,13 @@ const MyServices: React.FC = () => {
             <button className="bg-primary text-center text-white py-p0 px-p2 w-[150px] hover:bg-secondary transition-colors duration-300">
               Read More
             </button>
-          </div>
-          <div className="bg-white shadow-lg hover:shadow-xl border border-transparent hover:border-primary transition duration-300 p-6 flex flex-col w-full md:w-full lg:h-[420px] lg:w-full space-y-p1">
+          </motion.div>
+          <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="bg-white shadow-lg hover:shadow-xl border border-transparent hover:border-primary transition duration-300 p-6 flex flex-col w-full md:w-full lg:h-[420px] lg:w-full space-y-p1">
             <div className="bg-primary p-2 rounded-full h-20 w-20 flex justify-center items-center">
               <BrushIcon
                 style={{ width: "50px", height: "50px", color: "white" }}
@@ -62,7 +78,7 @@ const MyServices: React.FC = () => {
             <button className="bg-primary text-center text-white py-p0 px-p2 w-[150px] hover:bg-secondary transition-colors duration-300">
               Read More
             </button>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

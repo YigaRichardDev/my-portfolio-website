@@ -1,16 +1,26 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { projects, Project } from "./projectData";
 
 const LatestProjects: React.FC = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-p4 lg:h-[450px] font-roboto">
       {/* Component Header */}
-      <h2 className="text-heading font-bold text-center mb-p4">Latest <span className="text-primary">Projects</span></h2>
+      <motion.h2 
+       initial={{ opacity: 0, y: 20 }}
+       whileInView={{ opacity: 1, y: 0 }}
+       transition={{ duration: 0.6 }}
+       viewport={{ once: true }}
+      className="text-heading font-bold text-center mb-p4">Latest <span className="text-primary">Projects</span></motion.h2>
 
       {/* Project Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project: Project) => (
-          <div
+          <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
             key={project.id}
             className="relative overflow-hidden border shadow-lg group"
           >
@@ -29,7 +39,7 @@ const LatestProjects: React.FC = () => {
 
             {/* Blue Border on Hover */}
             <div className="absolute inset-0 border border-transparent group-hover:border-primary transition-colors duration-300"></div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

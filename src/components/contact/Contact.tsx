@@ -1,6 +1,7 @@
 import React from "react";
 import { TextField, Button, IconButton } from "@mui/material";
 import { Facebook, Twitter, LinkedIn, Instagram } from "@mui/icons-material";
+import { motion } from "framer-motion";
 
 const Contact: React.FC = () => {
   return (
@@ -8,7 +9,12 @@ const Contact: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-p4 font-roboto">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Contact Form Column */}
-          <div className="lg:flex-1 p-8 bg-white shadow-md">
+          <motion.div
+            className="lg:flex-1 p-8 bg-white shadow-md"
+            initial={{ opacity: 0, x: -100 }} // Start from left (hidden)
+            animate={{ opacity: 1, x: 0 }}     // Animate to original position
+            transition={{ duration: 0.6 }}      // Animation duration
+          >
             <h2 className="text-2xl font-semibold mb-4">Send Me A Message</h2>
             <form className="space-y-6">
               <TextField fullWidth label="Name" variant="outlined" required />
@@ -38,10 +44,15 @@ const Contact: React.FC = () => {
                 Send Message
               </Button>
             </form>
-          </div>
+          </motion.div>
 
           {/* Contact Information Column */}
-          <div className="lg:w-1/3 p-6 bg-white shadow-md flex flex-col space-y-4">
+          <motion.div
+            className="lg:w-1/3 p-6 bg-white shadow-md flex flex-col space-y-4"
+            initial={{ opacity: 0, x: 100 }} // Start from right (hidden)
+            animate={{ opacity: 1, x: 0 }}     // Animate to original position
+            transition={{ duration: 0.6 }}      // Animation duration
+          >
             <h3 className="text-xl font-semibold mb-2">Get In Touch</h3>
             <div className="mt-4">
               <p className="mb-2">
@@ -117,7 +128,7 @@ const Contact: React.FC = () => {
                 loading="lazy"
               ></iframe>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

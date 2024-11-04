@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { testimonials, Testimonial } from "./testimonialsData";
+import { motion } from "framer-motion";
 
 const responsive = {
   desktop: {
@@ -23,9 +24,14 @@ const Testimonials: React.FC = () => {
     <div className="bg-bg-color">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-p4 font-roboto">
         {/* Component Header */}
-        <h2 className="text-heading font-bold text-center mb-p4">
+        <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6}}
+        viewport={{ once: true }}
+        className="text-heading font-bold text-center mb-p4">
           Client's <span className="text-primary">Testimonials</span>
-        </h2>
+        </motion.h2>
 
         <Carousel
           swipeable={true}
