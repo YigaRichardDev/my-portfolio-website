@@ -10,16 +10,58 @@ const Contact: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Contact Form Column */}
           <motion.div
-            className="lg:flex-1 p-8 bg-white shadow-md"
+            className="lg:flex-1 p-4 bg-white shadow-md"
             initial={{ opacity: 0, x: -100 }} // Start from left (hidden)
             animate={{ opacity: 1, x: 0 }}     // Animate to original position
             transition={{ duration: 0.6 }}      // Animation duration
           >
             <h2 className="text-2xl font-semibold mb-4">Send Me A Message</h2>
             <form className="space-y-6">
-              <TextField fullWidth label="Name" variant="outlined" required />
-              <TextField fullWidth label="Email" variant="outlined" />
-              <TextField fullWidth label="Phone" variant="outlined" required />
+              <TextField fullWidth label="Name" variant="outlined" required 
+               sx={{
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    borderColor: '#3315F4', 
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#3315F4', 
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#3315F4', 
+                  },
+                },
+              }}
+              />
+              <TextField fullWidth label="Email" variant="outlined" 
+               sx={{
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    borderColor: '#3315F4', 
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#3315F4', 
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#3315F4', 
+                  },
+                },
+              }}
+              />
+              <TextField fullWidth label="Phone" variant="outlined" required 
+              sx={{
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    borderColor: '#3315F4', 
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#3315F4', 
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#3315F4', 
+                  },
+                },
+              }}
+              />
               <TextField
                 fullWidth
                 label="Message"
@@ -27,6 +69,19 @@ const Contact: React.FC = () => {
                 rows={4}
                 variant="outlined"
                 required
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: '#3315F4', 
+                    },
+                    '&:hover fieldset': {
+                      borderColor: '#3315F4', 
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#3315F4', 
+                    },
+                  },
+                }}
               />
               <Button
                 type="submit"

@@ -9,6 +9,8 @@ import Portfolio from './pages/PortfolioPage';
 import Blogs from './pages/BlogsPage';
 import Contact from './pages/ContactPage';
 import Loader from './components/loader/Loader';
+import BlogDetails from './components/blogs/BlogDetails';
+import ServiceDetailsPage from './pages/ServiceDetailsPage';
 
 const AppContent: React.FC = () => {
   const [loading, setLoading] = useState(false);
@@ -35,6 +37,8 @@ const AppContent: React.FC = () => {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog/:slug" element={<BlogDetails/>}/>
+          <Route path="/service/:slug" element={<ServiceDetailsPage/>}/>
         </Routes>
       </main>
       <Footer />

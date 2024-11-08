@@ -1,5 +1,7 @@
 import React from "react";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { blogPosts, BlogPost } from "./blogData";
 
 const Blogs: React.FC = () => {
@@ -31,15 +33,31 @@ const Blogs: React.FC = () => {
                 {/* Title */}
                 <h3 className="text-link font-semibold mb-4">{post.title}</h3>
                 {/* Date */}
-                <p className="text-sm text-text-light">{post.date}</p>
+                <p
+                  className="flex text-sm text-text-light"
+                  style={{ lineHeight: "1.5rem" }}
+                >
+                  <span className="mr-2 flex items-center">
+                    <CalendarTodayIcon
+                      sx={{ fontSize: 16, lineHeight: "inherit" }}
+                    />
+                  </span>
+                  {post.date}
+                </p>
                 {/* Content */}
                 <p className="text-gray-600 text-sm line-clamp-3">
                   {post.content}
                 </p>
                 {/* Read More Button */}
+                <div>
+                <Link to={`/blog/${post.slug}`}>
                 <button className="bg-primary text-center text-white py-p0 px-p2 w-[150px] hover:bg-secondary transition-colors duration-300">
                   Read More
                 </button>
+                </Link>
+                </div>
+               
+              
               </div>
             </motion.div>
           ))}

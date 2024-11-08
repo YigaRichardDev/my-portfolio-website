@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.6 }}
             className="text-heading"
           >
-            SOFTWARE ENGINEER, UI/UX DESIGNER,<br /> GRAPHICS DESIGNER.
+            SOFTWARE DEVELOPER, UI/UX DESIGNER,<br /> GRAPHICS DESIGNER.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
