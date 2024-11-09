@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const CallToAction = () => {
     return (
@@ -21,8 +22,9 @@ const CallToAction = () => {
           className="text-sm mb-6">
           Have a project in mind or just want to connect? Don’t hesitate to get in touch. Let’s turn your vision into reality!
           </motion.p>
-          
-          {/* Button */}
+          <div>
+            <Link to={'/contact'}>
+             {/* Button */}
           <motion.button 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,6 +33,9 @@ const CallToAction = () => {
           className="bg-primary text-center text-white py-p0 px-p2  hover:bg-secondary transition-colors duration-300">
               Send Me A Message
             </motion.button>
+            </Link>
+          </div>
+         
         </div>
       </div>
     );

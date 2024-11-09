@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="text-sm md:text-link lg:text-justify lg:mr-6"
           >
-            I’m a Software Engineer, UI/UX Designer, and Graphics Designer with expertise in creating seamless user experiences, designing impactful visuals, and developing efficient software solutions that bridge creativity and technology for high-quality digital products.
+            I’m a Software Developer, UI/UX Designer, and Graphics Designer with expertise in creating seamless user experiences, designing impactful visuals, and developing efficient software solutions that bridge creativity and technology for high-quality digital products.
           </motion.p>
           <motion.ul
             initial={{ opacity: 0, y: 20 }}

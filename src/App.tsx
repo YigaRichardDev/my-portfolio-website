@@ -11,7 +11,7 @@ import Contact from './pages/ContactPage';
 import Loader from './components/loader/Loader';
 import BlogDetails from './components/blogs/BlogDetails';
 import ServiceDetailsPage from './pages/ServiceDetailsPage';
-
+import ScrollToTop from './components/scroll/ScrollToTop';
 const AppContent: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
@@ -48,6 +48,7 @@ const AppContent: React.FC = () => {
 
 const App: React.FC = () => (
   <Router>
+    <ScrollToTop/>
     <AppContent />
   </Router>
 );

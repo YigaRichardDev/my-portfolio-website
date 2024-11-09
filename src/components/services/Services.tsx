@@ -12,7 +12,7 @@ const Services: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-heading font-medium text-center mb-p4"
+          className="text-heading font-medium text-center"
         >
           Our <span className="text-primary">Services</span>
         </motion.h2>

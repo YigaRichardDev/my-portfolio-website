@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
               </NavLink>
             ))}
             <Link
-              to="#"
+              to="/contact"
               className="bg-primary text-center text-white py-p0 px-p2  hover:bg-secondary transition-colors duration-300"
             >
               Hire Me
